@@ -1,0 +1,167 @@
+.card {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: -3px;
+  bottom: -3px;
+  background: #000;
+  z-index: -1;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.value span:first-child {
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 0.9;
+  transition: transform 0.3s ease;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.rangeContainer {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.rangeTrack {
+  height: 32px;
+  background: #f5f5f5;
+  position: relative;
+  border: 2px solid #000;
+  margin-bottom: 2rem;
+}
+
+.tolerableZone {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  background: #3b82f6;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  z-index: 1;
+}
+
+.comfortZone {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  background: #10b981;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  z-index: 2;
+}
+
+.sleepZone {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  background: #8b5cf6;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  z-index: 3;
+}
+
+.indicator {
+  position: absolute;
+  top: -8px;
+  width: 4px;
+  height: 48px;
+  background: #ef4444;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+  transform: translateX(-50%);
+  z-index: 10;
+  border: 2px solid #000;
+}
+
+.indicatorComfort { background: #000; }     /* black on green */
+.indicatorSleep { background: #000; }       /* black on purple */
+.indicatorTolerable { background: #000; }   /* black on blue */
+.indicatorAlert { background: #ef4444; }    /* red when out of range */
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 2px solid #000;
+  border-bottom: none;
+}
+
+.stat {
+  padding: 1rem;
+  border-bottom: 2px solid #000;
+  text-align: center;
+}
+
+.stat:not(:last-child) {
+  border-right: 2px solid #000;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.zoneMarker {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 2px;
+  background: #000;
+  z-index: 4;
+  transform: translateX(-50%);
+}
+
+.zoneMarker span {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  font-weight: 700;
+  background: #fff;
+  padding: 0.125rem 0.25rem;
+  border: 1px solid #000;
+  white-space: nowrap;
+}

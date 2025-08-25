@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sensors_frontend
+    restart: unless-stopped
+    ports:
+      - "8001:3000"

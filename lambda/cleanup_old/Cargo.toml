@@ -1,0 +1,16 @@
+[package]
+name = "cleanup_old"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+aws_lambda_events = { workspace = true }
+lambda_runtime = { workspace = true }
+aws-sdk-dynamodb = { workspace = true }
+aws-config = { workspace = true }
+chrono = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

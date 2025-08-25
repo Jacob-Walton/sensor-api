@@ -1,0 +1,93 @@
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-left: 4px solid #000;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  background: #fffef0;
+  transform: translateX(4px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid;
+}
+
+.status.optimal {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.status.warning {
+  background: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+}
+
+.statusDot {
+  display: none;
+}
+
+.content {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+.value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.value span:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.bar {
+  height: 8px;
+  background: #000;
+  position: relative;
+}
+
+.barFill {
+  height: 100%;
+  background: #ffeb3b;
+  position: relative;
+}
